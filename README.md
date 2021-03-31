@@ -53,7 +53,7 @@ Inspired by Do312(https://do312.com/) and every Chicagoan having a different opi
 
 #### Wireframes
 
-[Desktop Wireframes](https://lucid.app/lucidchart/e4f115e8-449f-4948-83c5-8d9523d269ff/edit?page=0_0#)
+[Desktop & Mobile Wireframes](https://lucid.app/lucidchart/e4f115e8-449f-4948-83c5-8d9523d269ff/edit?page=0_0#)
 
 
 #### Component Tree

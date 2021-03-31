@@ -53,20 +53,16 @@ Inspired by Do312(https://do312.com/) and every Chicagoan having a different opi
 
 #### Wireframes
 
-> 
-
 ![Desktop Wireframes](https://lucid.app/lucidchart/e4f115e8-449f-4948-83c5-8d9523d269ff/edit?page=0_0#)
 
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
-
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+![Component Tree](https://i.imgur.com/MuQSAcv.png)
 
 #### Component Architecture
 
-![Component Hierarchy](https://i.imgur.com/MuQSAcv.png)
+
 
 #### Time Estimates
 
@@ -96,10 +92,10 @@ Inspired by Do312(https://do312.com/) and every Chicagoan having a different opi
 
 ## Post-MVP
 
-> Create dark mode.
-> Expand app for users to create events.
-> Data tracking to provide insights on neighborhood - pizza likes correlation.
-> Geolocation to show restaurant's location
+Create dark mode.
+Expand app for users to create events.
+Data tracking to provide insights on neighborhood - pizza likes correlation.
+Geolocation to show restaurant's location
 
 ***
 

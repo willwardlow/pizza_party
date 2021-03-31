@@ -53,7 +53,7 @@ Inspired by Do312(https://do312.com/) and every Chicagoan having a different opi
 
 #### Wireframes
 
-![Desktop Wireframes](https://lucid.app/lucidchart/e4f115e8-449f-4948-83c5-8d9523d269ff/edit?page=0_0#)
+[Desktop Wireframes](https://lucid.app/lucidchart/e4f115e8-449f-4948-83c5-8d9523d269ff/edit?page=0_0#)
 
 
 #### Component Tree
@@ -61,7 +61,28 @@ Inspired by Do312(https://do312.com/) and every Chicagoan having a different opi
 ![Component Tree](https://i.imgur.com/MuQSAcv.png)
 
 #### Component Architecture
+``` structure
 
+src
+|__ components/
+      |__ containers
+          |__ PizzaContainer
+      |__ screens
+          |__ PizzaCreate
+          |__ PizzaEdit
+          |__ PizzaDetail
+          |__ Pizzas
+      |__ Shared
+          |__Layout
+          |__Nav
+      
+|__ services/
+      |__api-Config
+      |__auth.js
+      |__pizzas.js
+      |__neighborhoods.js
+
+```
 
 
 #### Time Estimates

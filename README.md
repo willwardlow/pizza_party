@@ -91,13 +91,13 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Basic App Structure (Links and Routers)    |    H     |     3 hrs      |        |    TBD    |
-| Basic CSS Layout |    H     |     3 hrs      |      |     TBD     |
-| Create Backend CRUD Actions |    H     |     3 hrs      |         |     TBD     |
-| Create Auth and User Implementation |    H     |     3 hrs      |          |     TBD     |
-| Create Frontend CRUD Actions |    H     |     5 hrs      |         |     TBD     |
-| Advanced CSS / Responsiveness |    H     |     4 hrs      |         |     TBD     |
-| TOTAL               |          |     21 hrs      |      |     TBD     |
+| Basic App Structure (Links and Routers)    |    H     |     4 hrs      |        |    TBD    |
+| Basic CSS Layout |    H     |     4 hrs      |      |     TBD     |
+| Create Backend CRUD Actions |    H     |     4 hrs      |         |     TBD     |
+| Create Auth and User Implementation |    H     |     4 hrs      |          |     TBD     |
+| Create Frontend CRUD Actions |    H     |     6 hrs      |         |     TBD     |
+| Advanced CSS / Responsiveness |    H     |     6 hrs      |         |     TBD     |
+| TOTAL               |          |     28 hrs      |      |     TBD     |
 
 <br>
 
@@ -106,7 +106,7 @@ src
 #### ERD Model
 
 
-![ERD Model](https://i.imgur.com/7PTw7e0.png)
+![ERD Model](https://i.imgur.com/tKX1p76.png)
 <br>
 
 ***

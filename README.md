@@ -30,10 +30,10 @@ Inspired by Do312(https://do312.com/) and every Chicagoan having a different opi
 
 ### Goals
 
-- _User will have the ability to login, register, and create a profile_
-- _User can submit an entry._
-- _Other users see an index of all available restaurants (sort and filter)._
-- _Pizza Details page that can show more details about the pizza (only the user who posted the user can delete) _
+- User will have the ability to login, register, and create a profile
+- User can submit an entry.
+- Other users see an index of all available restaurants (sort and filter).
+- Pizza Details page that can show more details about the pizza (only the user who posted the user can delete).
 
 <br>
 
@@ -42,10 +42,10 @@ Inspired by Do312(https://do312.com/) and every Chicagoan having a different opi
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Create front end user experience._ |
-|   React Router   | _Provide links and routers to organize app elements._ |
-|  React-Responsive-Carousel   | _Create image carousel used on landing page._ |
-|   Rails  | _Create backend database._ |
+|      React       | Create front end user experience. |
+|   React Router   | Provide links and routers to organize app elements. |
+|  React-Responsive-Carousel   | Create image carousel used on landing page. |
+|   Rails  | Create backend database. |
 
 <br>
 

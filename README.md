@@ -19,8 +19,8 @@
 
 ## Overview
 
-_**Pizza Party** is a full stack application where users can login in and submit their Chicago restaurant that's viable for having the best pizza in Chicago. Users can login and state what side of Chicago they are from as well as their associated neighborhood.The entry will provide details about the restaurant's location, neighborhood and track likes.
-Inspired by Do312(https://do312.com/) and every Chicagoan having a different opinion on pizza!_
+**Pizza Party** is a full stack application where users can login in and submit their Chicago restaurant that's viable for having the best pizza in Chicago. Users can login and state what side of Chicago they are from as well as their associated neighborhood.The entry will provide details about the restaurant's location, neighborhood and track likes.
+Inspired by Do312(https://do312.com/) and every Chicagoan having a different opinion on pizza!
 
 
 <br>

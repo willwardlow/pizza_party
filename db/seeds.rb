@@ -87,7 +87,7 @@ User.destroy_all
 
 puts "#{Neighborhood.count} neighborhoods created"
 #seeding users
-@admin = User.create!(username: 'will', password: '123456', neighborhood: @lincoln_square, email: 'will@email.com')
+@admin = User.create!(username: 'will', password:'123456', neighborhood: @lincoln_square, email: 'will@email.com')
 
 puts "#{User.count} created"
 

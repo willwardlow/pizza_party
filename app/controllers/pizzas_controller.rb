@@ -1,4 +1,5 @@
 class PizzasController < ApplicationController
+  before_action :authorize_request, except: [:index, :show]
   before_action :set_pizza, only: [:show, :update, :destroy]
 
   # GET /pizzas

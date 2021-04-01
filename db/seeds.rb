@@ -87,19 +87,20 @@ User.destroy_all
 
 puts "#{Neighborhood.count} neighborhoods created"
 #seeding users
-@admin = User.create!(username: 'will', password:'123456', neighborhood: @lincoln_square, email: 'will@email.com')
+@admin = User.create!(username: 'will', password: '123456', neighborhood: @lincoln_square, email: 'will@email.com')
 
 puts "#{User.count} created"
 
-#seeding pizzas
-Pizza.create!(restaurant_name: 'Tortorice\'s Pizza', pizza_type: 'thin crust', neighborhood: @irving_park, user: @admin, description: 'Gotta try the piasso style pizza for alll you cheese lovers! Two pizza crusts stacked on top with tons of cheese in between. Then sauce, more cheese, adn toppings!', image_url:'https://www.tortoricespizza.com/wp-content/uploads/2020/03/PICASSO-600x308.png.webp')
+#seeding pizzas 
 
-Pizza.create!(restaurant_name: 'Giordano\'s Pizza', pizza_type: 'deep dish', neighborhood: @loop, user: @admin, description: 'The classic deep dish pizza. Ideal for tourists.', image_url:'https://mediaassets.koaa.com/cordillera-network/wp-content/uploads/sites/11/2018/11/28050722/Giordanos-fixed-1024x576.jpg')
+Pizza.create!(restaurant_name: 'Tortorice\'s Pizza', pizza_type: 'Thin Crust', neighborhood: @irving_park, user_id: 1, description: 'Gotta try the piasso style pizza for alll you cheese lovers! Two pizza crusts stacked on top with tons of cheese in between. Then sauce, more cheese, adn toppings!', image_url:'https://www.tortoricespizza.com/wp-content/uploads/2020/03/PICASSO-600x308.png.webp')
 
-Pizza.create!(restaurant_name: 'D\'agostino\'s ', pizza_type: 'thin crust', neighborhood: @lakeview, user: @admin, description:'Thin and crispy crust with layers of cheese and mountains of toppings.', image_url: 'https://s3-media0.fl.yelpcdn.com/bphoto/wTwQ1NZx9myfwWtv5f1iyA/348s.jpg')
+Pizza.create!(restaurant_name: 'Giordano\'s Pizza', pizza_type: 'Deep Dish', neighborhood: @loop, user_id: 1, description: 'The classic deep dish pizza. Ideal for tourists.', image_url:'https://mediaassets.koaa.com/cordillera-network/wp-content/uploads/sites/11/2018/11/28050722/Giordanos-fixed-1024x576.jpg')
 
-Pizza.create!(restaurant_name: 'Pequods\'s Pizza', pizza_type: 'deep dish', neighborhood: @lincoln_park, user: @admin, description: 'Amazing deep dish. The burnt cheese crust makes it even better!. ', image_url:'https://pequodspizza.com/wp-content/uploads/2017/04/pequods-deep-dish-pizza-chicago.jpg')
+# Pizza.create!(restaurant_name: 'D\'agostino\'s ', pizza_type: 'Thin Crust', neighborhood: @lakeview, user: @admin, description:'Thin and crispy crust with layers of cheese and mountains of toppings.', image_url: 'https://s3-media0.fl.yelpcdn.com/bphoto/wTwQ1NZx9myfwWtv5f1iyA/348s.jpg')
 
-Pizza.create!(restaurant_name: 'Piece Brewery', pizza_type: 'thin crust', neighborhood: @wicker_park, user: @admin, description: 'Good pizza with creative options. Especially the Atomic pizza, a collaboration with Hot Doug\s Atomic Sausage! ', image_url: 'https://infatuation.imgix.net/media/images/reviews/piece-brewery-and-pizzeria/Piece%20Pizzeria%20Menu%20Pizza%20%281%29.jpg?auto=format&h=890&w=1336')
+# Pizza.create!(restaurant_name: 'Pequods\'s Pizza', pizza_type: 'Deep Dish', neighborhood: @lincoln_park, user: @admin, description: 'Amazing deep dish. The burnt cheese crust makes it even better!. ', image_url:'https://pequodspizza.com/wp-content/uploads/2017/04/pequods-deep-dish-pizza-chicago.jpg')
+
+# Pizza.create!(restaurant_name: 'Piece Brewery', pizza_type: 'Thin Crust', neighborhood: @wicker_park, user: @admin, description: 'Good pizza with creative options. Especially the Atomic pizza, a collaboration with Hot Doug\'s Atomic Sausage! ', image_url: 'https://infatuation.imgix.net/media/images/reviews/piece-brewery-and-pizzeria/Piece%20Pizzeria%20Menu%20Pizza%20%281%29.jpg?auto=format&h=890&w=1336')
 
 puts "#{Pizza.count} pizzas created"

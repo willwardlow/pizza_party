@@ -29,6 +29,7 @@ User.destroy_all
 @lincoln_park = Neighborhood.create!(name: 'Lincoln Park', city_area: 'N', nearby_transit: true)
 @avondale = Neighborhood.create!(name: 'Avondale', city_area: 'N', nearby_transit: true)
 @logan = Neighborhood.create!(name: 'Logan Square', city_area: 'NW', nearby_transit: true)
+@wicker_park = Neighborhood.create!(name: 'Wicker Park', city_area: 'NW', nearby_transit: true)
 @avondale = Neighborhood.create!(name: 'Portage Park', city_area: 'NW', nearby_transit: true)
 @irving_park = Neighborhood.create!(name: 'Irving Park', city_area: 'NW', nearby_transit: true)
 @dunning = Neighborhood.create!(name: 'Dunning', city_area: 'NW', nearby_transit: true)

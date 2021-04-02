@@ -1,8 +1,12 @@
 class User < ApplicationRecord
   has_secure_password
 
-  has_and_belongs_to_many :pizzas
-  has_many :likes
+  has_many :pizzas
+  has_and_belongs_to_many :likes,
+    class_name: "Pizza",
+    foreign_key: "user_id",
+    association_foreign_key: "pizza_id",
+    join_table: "pizzas_users"
   belongs_to :neighborhood
 
   validates :username, presence: true, uniqueness: true

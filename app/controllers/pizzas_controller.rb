@@ -1,6 +1,6 @@
 class PizzasController < ApplicationController
-  before_action :authorize_request, except: [:index, :show]
-  before_action :set_pizza, only: [:show, :update, :destroy]
+  before_action :authorize_request, except: [:create, :update, :destroy]
+  before_action :set_pizza, only: [:update, :destroy]
 
   # GET /pizzas
   def index
@@ -11,12 +11,14 @@ class PizzasController < ApplicationController
 
   # GET /pizzas/1
   def show
+    @pizza = Pizza.find(params[:id])
     render json: @pizza, include: :neighborhood
   end
 
   # POST /pizzas
   def create
     @pizza = Pizza.new(pizza_params)
+    @pizza.user = @current_user
 
     if @pizza.save
       render json: @pizza, status: :created, location: @pizza
@@ -42,11 +44,11 @@ class PizzasController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pizza
-      @pizza = Pizza.find(params[:id])
+      @pizza = @current_user.pizzas.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def pizza_params
-      params.require(:pizza).permit(:restaurant_name, :description, :neighborood)
+      params.require(:pizza).permit(:restaurant_name)
     end
 end

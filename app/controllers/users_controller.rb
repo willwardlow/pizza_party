@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   # POST /users
   def create
     @user = User.new(user_params)
+    # @neighborhood = Neighborhood.where(user_id: @user.id).find(params[:neighborhood_id])
     # user's neighborhood = neighborhood.find(neighborhood.name)
 
     if @user.save
@@ -22,7 +23,7 @@ class UsersController < ApplicationController
       render json: {
         user: @user.attributes.except("password_digest"),
         token: @token
-        }, include: :neighborhood,  status: :created
+        },  status: :created
     else
       render json: @user.errors, status: :unprocessable_entity
     end
@@ -50,6 +51,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:username, :email, :password, :neighborhood)
+      params.require(:user).permit(:username, :email, :password, :neighborhood_id)
     end
 end

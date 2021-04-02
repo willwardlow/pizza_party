@@ -1,5 +1,5 @@
 class NeighborhoodsController < ApplicationController
-  before_action :set_neighborhood, only: [:show, :update, :destroy]
+  before_action :set_neighborhood, only: [:show ]
 
   # GET /neighborhoods
   def index
@@ -13,39 +13,11 @@ class NeighborhoodsController < ApplicationController
     render json: @neighborhood
   end
 
-  # POST /neighborhoods
-  def create
-    @neighborhood = Neighborhood.new(neighborhood_params)
-
-    if @neighborhood.save
-      render json: @neighborhood, status: :created, location: @neighborhood
-    else
-      render json: @neighborhood.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /neighborhoods/1
-  def update
-    if @neighborhood.update(neighborhood_params)
-      render json: @neighborhood
-    else
-      render json: @neighborhood.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /neighborhoods/1
-  def destroy
-    @neighborhood.destroy
-  end
-
+  #no need to create or delete a neighborhood since they are hard coded in seeds
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_neighborhood
       @neighborhood = Neighborhood.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
-    def neighborhood_params
-      params.require(:neighborhood).permit(:name, :city_area, :nearby_transit)
-    end
 end

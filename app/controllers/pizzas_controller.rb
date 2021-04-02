@@ -11,7 +11,7 @@ class PizzasController < ApplicationController
 
   # GET /pizzas/1
   def show
-    render json: @pizza, include:neighborhood
+    render json: @pizza, include: :neighborhood
   end
 
   # POST /pizzas

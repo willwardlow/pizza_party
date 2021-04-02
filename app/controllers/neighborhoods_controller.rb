@@ -10,7 +10,7 @@ class NeighborhoodsController < ApplicationController
 
   # GET /neighborhoods/1
   def show
-    render json: @neighborhood
+    render json: @neighborhood, include: :users
   end
 
   #no need to create or delete a neighborhood since they are hard coded in seeds

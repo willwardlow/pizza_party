@@ -1,38 +1,58 @@
-import {useState} from 'react'
+import { useState, useEffect } from 'react';
+import { useParams, useHistory } from 'react-router-dom';
 
-export default function PizzaCreate(props) {
-
+export default function PizzaEdit(props) {
   const [formData, setFormData] = useState({
     restaurant_name: '',
-    description: '',
     neighborhood_id: '',
+    description: '',
     pizza_type: '',
-    image_url: ''
+    image_url: '',
   })
-  const {restaurant_name, description, neighborhood_id, pizza_type, image_url} = formData
+
   const [cityArea, setCityArea] = useState('')
 
-  const { handleCreate, neighborhoods } = props
+  const { restaurant_name, neighborhood_id, description, pizza_type, image_url } = formData
+  const { id } = useParams();
+
+  const { pizzas, handleUpdate, neighborhoods} = props;
+
+  useEffect(() => {
+    const prefillFormData = () => {
+      const pizzaItem = pizzas.find(pizza => pizza.id === Number(id));
+      setFormData({
+        restaurant_name: pizzaItem.restaurant_name,
+        description: pizzaItem.description,
+        image_url: pizzaItem.image_url,
+        pizza_type: pizzaItem.pizza_type,
+        cityArea: pizzaItem.cityArea,
+        neighborhood_id: pizzaItem.neighborhood_id
+      })
+    }
+    if (pizzas.length) {
+      prefillFormData();
+    }
+  }, [pizzas, id])
 
   const filterNeighborhoods = () => {
     return neighborhoods.filter((neighborhood) => {
        return neighborhood.city_area === cityArea
      })
    }
-  
+
   const handleChange = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
       [name]: value
     }))
-    
   }
 
+  
   return (
-    <form onSubmit={(e) => {
+     <form onSubmit={(e) => {
       e.preventDefault();
-      handleCreate(formData)
+      handleUpdate(id, formData)
     }}>
 
       <h3> Add a Pizza to the Party!</h3>

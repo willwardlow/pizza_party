@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
 import { Switch, Route, useHistory } from 'react-router-dom';
 
-import { destroyPizza, getAllPizzas, postAPizza } from '../services/pizzas'
+import { destroyPizza, getAllPizzas, postAPizza, putAPizza } from '../services/pizzas'
 
 import Pizzas from '../screens/Pizzas'
 import PizzasDetail from '../screens/PizzasDetail'
 import PizzaCreate from '../screens/PizzaCreate'
+import PizzaEdit from '../screens/PizzaEdit';
 
 function MainContainer(props) {
 
@@ -32,14 +33,21 @@ function MainContainer(props) {
     setPizzas(prevState => [...prevState, newPizza]);
     history.push('/pizzas')
   }
+
+  const handleUpdate = async (id, pizzaData) => {
+    const updatedPizza = await putAPizza(id, pizzaData);
+    setPizzas(prevState => prevState.map(pizza => {
+      return pizza.id === Number(id) ? updatedPizza : pizza
+    }))
+    history.push('/pizzas')
+  }
   return (
     <Switch>
       <Route path='/pizzas/new'>
         <PizzaCreate handleCreate={handleCreate} neighborhoods={neighborhoods} />
       </Route>
-
       <Route path='/pizzas/:id/edit'>
-
+        <PizzaEdit pizzas={pizzas} handleUpdate={handleUpdate} neighborhoods={neighborhoods}/>
       </Route>
       <Route path='/pizzas/:id'>
         <PizzasDetail currentUser={currentUser} handleDelete={handleDelete}/>

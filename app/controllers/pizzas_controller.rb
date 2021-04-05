@@ -1,5 +1,5 @@
 class PizzasController < ApplicationController
-  before_action :authorize_request, except: [:index, :create, :update, :destroy]
+  # before_action :authorize_request, except: [:index, :show, :create, :update, :destroy]
   before_action :set_pizza, only: [:update, :destroy]
 
   # GET /pizzas
@@ -11,7 +11,7 @@ class PizzasController < ApplicationController
   # GET /pizzas/1
   def show
     @pizza = Pizza.find(params[:id])
-    render json: @pizza, include: :neighborhood
+    render json: @pizza, include: [:neighborhood, :user] 
   end
 
   # POST /pizzas
@@ -48,6 +48,6 @@ class PizzasController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def pizza_params
-      params.require(:pizza).permit(:restaurant_name)
+      params.require(:pizza).permit(:restaurant_name, :description, :pizza_type, :image_url, :neighborhood_id )
     end
 end

@@ -70,7 +70,7 @@ function Register(props) {
       <label htmlFor='city-area'>
         What part of Chicago are you from?
       </label>
-      <select name='city_area' defaultValue='default' onChange={(e) => setCityArea(e.target.value)}>
+      <select name='city_area' defaultValue='default' required onChange={(e) => setCityArea(e.target.value)}>
         <option value='default' disabled> -- City Area -- </option>
         <option value='C'>Central</option>
         <option value='NW'>Northwest</option>

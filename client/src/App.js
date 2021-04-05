@@ -69,7 +69,7 @@ function App() {
             <Register handleRegister={handleRegister} neighborhoods={neighborhoods} />
           </Route>
           <Route path='/'>
-            <MainContainer currentUser={ currentUser}/>
+            <MainContainer currentUser={currentUser} neighborhoods={neighborhoods}/>
           </Route>
         </Switch>
       </Layout>

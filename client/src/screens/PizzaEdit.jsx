@@ -26,7 +26,7 @@ export default function PizzaEdit(props) {
         image_url: pizzaItem.image_url,
         pizza_type: pizzaItem.pizza_type,
         cityArea: pizzaItem.cityArea,
-        neighborhood_id: pizzaItem.neighborhood.id
+        neighborhood_id: pizzaItem.neighborhood_id
       })
     }
     if (pizzas.length) {

@@ -25,7 +25,8 @@ function MainContainer(props) {
 
   const handleDelete = async (id) => {
     await destroyPizza(id);
-    setPizzas(prevState => prevState.filter(food =>food.id !== id))
+    setPizzas(prevState => prevState.filter(pizza => pizza.id !== id))
+    history.push('/pizzas')
   }
 
   const handleCreate = async (pizzaData) => {

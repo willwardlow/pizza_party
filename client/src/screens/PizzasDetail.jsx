@@ -7,7 +7,7 @@ import { getOnePizza } from '../services/pizzas';
 export default function PizzasDetail(props) {
 
   const [pizza, setPizza] = useState(null);
-  const{handleDelete} = props
+  const{currentUser, handleDelete} = props
   const { id } = useParams();
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function PizzasDetail(props) {
       const pizzaInfo = await getOnePizza(id);
       setPizza(pizzaInfo)
     }
-    getAPizza()
+    getAPizza();
   }, [id])
   
 
@@ -28,15 +28,15 @@ export default function PizzasDetail(props) {
       <h4>City Area: {`${pizza?.neighborhood.city_area}`}</h4>
       <h5>Submitted By: { `${pizza?.user.username}`}</h5>
       <p>Description: {`${pizza?.description}`}</p>
-      {/* { currentUser?.id === pizza?.user.id ?  */}
+      { currentUser?.id === pizza?.user.id &&
         <>
           <Link to={`/pizzas/${pizza?.id}/edit`}>
             <button>Update</button>
-        </Link>
-        <button onClick={handleDelete}> Delete</button>
+          </Link>
+          <button onClick={() => handleDelete(id)}> Delete</button>
         </> 
+         }
 
-           
     </div>
   )
 }

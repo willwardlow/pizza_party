@@ -1,12 +1,11 @@
 class PizzasController < ApplicationController
-  before_action :authorize_request, except: [:create, :update, :destroy]
+  before_action :authorize_request, except: [:index, :create, :update, :destroy]
   before_action :set_pizza, only: [:update, :destroy]
 
   # GET /pizzas
   def index
     @pizzas = Pizza.all
-
-    render json: @pizzas
+    render json: @pizzas, include: :neighborhood
   end
 
   # GET /pizzas/1

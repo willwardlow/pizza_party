@@ -26,10 +26,10 @@ function Login(props) {
     }}>
       <h3>Login</h3>
       <label htmlFor='username'> Username:</label>
-      <input type='text' name='username' value={username} />
+      <input type='text' name='username' placeholder='Enter Username'value={username} onChange={handleChange} />
 
       <label htmlFor='password'> Password: </label>
-      <input type='password' name='password' value={password} />
+      <input type='password' name='password' value={password} onChange={handleChange}/>
       
       <Link to='/register'>New To Chicago? Register Here</Link>
       <button> Submit</button>

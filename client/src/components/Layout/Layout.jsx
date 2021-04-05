@@ -2,10 +2,10 @@ import Nav from '../Nav/Nav'
 
 function Layout(props) {
   return (
-    <Layout>
+    <div>
       <Nav />
       {props.children}
-    </Layout>
+      </div>
   )
 }
 

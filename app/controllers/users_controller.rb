@@ -19,11 +19,11 @@ class UsersController < ApplicationController
     # user's neighborhood = neighborhood.find(neighborhood.name)
 
     if @user.save
-      @token = encode({id: @user.id})
+      @token = encode({ id: @user.id })
       render json: {
         user: @user.attributes.except("password_digest"),
         token: @token
-        },  status: :created
+        }, include: :neighborhood, status: :created
     else
       render json: @user.errors, status: :unprocessable_entity
     end

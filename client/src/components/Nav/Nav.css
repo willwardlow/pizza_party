@@ -49,3 +49,33 @@
 .index, .create, .logout {
   padding-left: 130px;
 }
+
+@media screen and (max-width: 1200px) {
+
+  .nav-bar a{
+    font-size: 28px;
+  }
+
+  .login, .register, .index, .create, .logout {
+    padding-left: 150px;
+  }
+
+  .chicago-stars {
+    padding-left: 150px;
+  }
+}
+
+@media screen and (max-width: 1000px){
+
+  .nav-bar a{
+    font-size: 20px;
+  }
+
+  .login, .register, .index, .create, .logout {
+    padding-left: 100px;
+  }
+
+  .chicago-stars{
+    padding-left: 100px;
+  }
+}

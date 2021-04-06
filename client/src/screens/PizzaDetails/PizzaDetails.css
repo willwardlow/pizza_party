@@ -7,6 +7,7 @@
   background-color: #fdb91e;
   border: 2px solid #514c4d;
   border-radius: 7px;
+  padding-top: 10px;
 }
 
 .details-text{
@@ -23,7 +24,8 @@
 .pizza-details img {
   width: 400px;
   border-radius: 7px;
-  border-right:2px solid #514c4d
+  border-right:2px solid #514c4d;
+  margin-left: 20px;
 }
 
 .label{
@@ -38,6 +40,7 @@
   margin-top: 20px;
   display: flex;
   align-items: center;
+  padding-bottom: 15px;
 }
 
 .details-text:last-child{
@@ -62,5 +65,28 @@
 .delete:hover{
   background-color: #ff1b09;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+  .pizza-details {
+    width: 700px;
+  }
+  .pizza-details img {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .pizza-details {
+    margin-left: 200px;
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .pizza-details{
+    margin-left: 100px;
+    width: 500px;
+  }
 }
 

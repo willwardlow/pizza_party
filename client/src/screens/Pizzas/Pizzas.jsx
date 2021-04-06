@@ -1,18 +1,18 @@
-import { useState } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import './Pizzas.css'
 
 function Pizzas(props) {
   
   const { pizzas } = props;
   
   return (
-    <div>
-      
+    <div className='pizzas-container'> 
     {pizzas.map((pizza, index) => (
-      <div key={index}>
+      <div className='pizza' key={index}>
         <Link to={`/pizzas/${pizza.id}`}>
           <img src={pizza.image_url} alt={pizza.name} />
-          <p> {pizza.restaurant_name} - {pizza.neighborhood.name}</p>
+          <p> {pizza.restaurant_name}</p>
+          <p>{pizza.neighborhood.name}</p>
         </Link>
       </div>
     ))}

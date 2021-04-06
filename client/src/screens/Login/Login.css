@@ -65,3 +65,10 @@
 .login-form a:hover {
   font-weight: bold;
 }
+
+@media screen and (max-width: 1000px) {
+  .login-form{
+    width: 300px;
+    margin-left: 100px;
+  }
+}

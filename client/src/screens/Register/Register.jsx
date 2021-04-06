@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import './Register.css'
+
 function Register(props) {
   const [formData, setFormData] = useState({
     username: '',
@@ -30,12 +32,17 @@ function Register(props) {
   }
 
   return (
+    <div className='register-container'>
+      <div className='register-form'>
+        <p className='form-text'> New to the site? <br/> Register below</p>
     <form onSubmit={(e) => {
       e.preventDefault();
       handleRegister(formData)
-    }}>
+      }}>
+
+      <div className='new-username' >
       <label htmlFor='username'>
-        Username:
+        Create Username:
         </label>
       <input
         type='text'
@@ -43,8 +50,10 @@ function Register(props) {
         placeholder='Enter Username'
         value={username}
         onChange={handleChange}
-        required />
+            required />
+      </div>
       
+      <div className='new-email'>
       <label htmlFor='email'>
         Email:
       </label>
@@ -55,20 +64,24 @@ function Register(props) {
         value={email}
         onChange={handleChange}
         required />
+          </div>
       
+      <div className='new-password'>
       <label htmlFor='password'>
-        Password:
+        Enter Password:
       </label>
       <input
         type='password'
         name='password'
-        placeholder='Enter Password'
+        placeholder='Min 6 Characters'
         value={password}
         onChange={handleChange}
-        required />
+          required />
+      </div>
       
+      <div className='city-area'>
       <label htmlFor='city-area'>
-        What part of Chicago are you from?
+        Part of Chicago?
       </label>
       <select name='city_area' defaultValue='default' required onChange={(e) => setCityArea(e.target.value)}>
         <option value='default' disabled> -- City Area -- </option>
@@ -78,10 +91,12 @@ function Register(props) {
         <option value='S'>South</option>
         <option value='SW'>Southwest</option>
         <option value='W'>West</option>
-      </select>
+          </select>
+      </div>
 
+      <div className='new-neighborhood'>
       <label htmlFor='neighborhood_id'>
-        What neighborhood you reside in?
+        Neighborhood?
       </label>
       <select name='neighborhood_id' defaultValue='default' onChange={handleChange}>
         <option value='default' disabled> -- Select A Neighborhood --</option>
@@ -90,9 +105,13 @@ function Register(props) {
         )
         )}
       </select>
+      </div>
 
       <button>Submit</button>
-    </form>
+      </form>
+      </div>
+      <img className='map' src='https://i.imgur.com/hwotu30.png' alt='chicago-map' />
+      </div>
   );
 
 }

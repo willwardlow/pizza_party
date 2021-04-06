@@ -1,0 +1,73 @@
+.edit-container {
+  margin-top: 200px;
+  display: flex;
+  width: 700px;
+  flex-flow: column;
+  margin-left: 300px;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
+  background-color: #fdb91e;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  border: 2px solid #514c4d;
+  border-radius: 7px;
+  filter: drop-shadow(16px 16px 10px #514c4d);
+}
+
+.edit-container h3{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+.edit-description, 
+.edit-area, 
+.edit-neighborhood,
+.edit-pizza-type, 
+.edit-image{
+  padding-top: 10px;
+  padding-bottom: 15px;
+  text-align: left;
+}
+
+.edit-description label, 
+.edit-area label, 
+.edit-image label, 
+.edit-neighborhood label, 
+.edit-pizza-type label,
+.edit-restaurant label {
+  margin-right: 10px;
+}
+
+.edit-restaurant {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.edit-neighborhood {
+  text-align: left;
+}
+
+.edit-neighborhood select {
+  margin-left: 20px;
+}
+
+.edit-description{
+  margin-bottom: 10px;
+}
+
+.edit-container button:hover {
+  background-color: #ff1b09;
+}
+
+.edit-container button {
+  margin-left: 200px;
+  margin-top: 10px;
+}
+
+.edit-container button:hover {
+  background-color: #ff1b09;
+}

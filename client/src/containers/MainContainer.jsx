@@ -3,10 +3,10 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 
 import { destroyPizza, getAllPizzas, postAPizza, putAPizza } from '../services/pizzas'
 
-import Pizzas from '../screens/Pizzas'
-import PizzasDetail from '../screens/PizzasDetail'
-import PizzaCreate from '../screens/PizzaCreate'
-import PizzaEdit from '../screens/PizzaEdit';
+import Pizzas from '../screens/Pizzas/Pizzas'
+import PizzasDetail from '../screens/PizzaDetails/PizzasDetail'
+import PizzaCreate from '../screens/PizzaCreate/PizzaCreate'
+import PizzaEdit from '../screens/PizzaEdit/PizzaEdit';
 
 function MainContainer(props) {
 
@@ -25,7 +25,7 @@ function MainContainer(props) {
 
   const handleDelete = async (id) => {
     await destroyPizza(id);
-    setPizzas(prevState => prevState.filter(pizza => pizza.id !== id))
+    setPizzas(prevState => prevState.filter(pizza => pizza.id !== Number(id)))
     history.push('/pizzas')
   }
 

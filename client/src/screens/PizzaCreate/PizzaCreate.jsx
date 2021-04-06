@@ -1,4 +1,5 @@
-import {useState} from 'react'
+import { useState } from 'react'
+import './PizzaCreate.css'
 
 export default function PizzaCreate(props) {
 
@@ -30,21 +31,25 @@ export default function PizzaCreate(props) {
   }
 
   return (
+    <div className='create-container' >
     <form onSubmit={(e) => {
       e.preventDefault();
       handleCreate(formData)
     }}>
 
-      <h3> Add a Pizza to the Party!</h3>
-
+        <h3> Add a Pizza to the Party!</h3>
+        
+      <div className='create-restaurant'>
       <label> Restaurant Name:</label>
       <input type='text'
         name='restaurant_name'
-        placeholder='Enter name of restaurant'
+        placeholder='Restaurant'
         value={restaurant_name}
         onChange={handleChange}
-        required />
-      
+            required />
+        </div>
+        
+        <div className='create-city-area'>
       <label htmlFor='city-area'>
         City Area:
       </label>
@@ -56,44 +61,54 @@ export default function PizzaCreate(props) {
         <option value='S'>South</option>
         <option value='SW'>Southwest</option>
         <option value='W'>West</option>
-      </select>
+          </select>
+        </div>
 
+      <div className='create-neighborhood'>
       <label htmlFor='neighborhood_id'></label>
-      Select neighborhood:
+      Neighborhood:
       <select name='neighborhood_id' defaultValue='default' onChange={handleChange}>
         <option value='default' disabled> -- Select A Neighborhood --</option>
         {filterNeighborhoods().map((neighborhood, index) => (
           <option key={index} value={neighborhood.id}>{neighborhood.name}</option>
         )
         )}
-      </select>
-      
+          </select>
+        </div>
+        
+      <div className='create-pizza-type'>
       <label htmlFor='pizza_type'> Type of Pizza:</label>
       <select name='pizza_type' defaultValue='default' onChange={handleChange} required>
         <option value='default' disabled> -- Select Pizza Type--</option>
         <option value='Thin Crust'>Thin Crust</option>
         <option value='Deep Dish'>Deep Dish</option>
-        </select >
+          </select >
+      </div>
 
-      <label htmlFor='image_url'> Enter a link to this pizza's image </label>
+        <div className='create-image'>
+      <label htmlFor='image_url'> Pizza Link Image:</label>
       <input type='text'
         name='image_url'
         placeholder='www.imagelink.com'
         value={image_url}
         required
-        onChange={handleChange}/>
+            onChange={handleChange} />
+          </div>
       
+        <div className='create-description'>
       <label htmlFor='description'> Enter a description:</label>
       <textarea
-        rows='20'
-        cols='10'
+        rows='10'
+        cols='40'
         required
         name='description'
         value={description}
         placeholder='Mountains of cheese and toppings'
-        onChange={ handleChange}/>
+            onChange={handleChange} />
+          </div>
       
       <button>Submit Pizza</button>
-    </form>
+      </form>
+      </div>
   )
 }

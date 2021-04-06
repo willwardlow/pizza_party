@@ -2,18 +2,50 @@
   text-decoration: none;
   color: black;
   font-size: 30px;
+  font-weight: bold;
   font-family: 'New Tegomin', serif;
 }
 
 .nav-bar{
   display: flex;
   width: 100%;
-  height: 100px;
+  height: 80px;
   align-items: center;
-  justify-items: space-around;
+  justify-content: flex-start;
   position: fixed;
   top: 0;
   left: 0;
   background-color: #41b6e6;
   margin-bottom: 100px;
+  margin-top: 25px;
+  filter: drop-shadow(16px 16px 10px #514c4d)
+}
+
+.title{
+  padding-left: 40px;
+  padding-right: 100px;
+}
+
+.login {
+  padding-left: 200px;
+  padding-right: 30px;
+}
+
+.register {
+  padding-left: 200px;
+}
+
+.nav-bar a:hover {
+  text-decoration: underline;
+  color: #ff1b09; 
+}
+
+.chicago-stars {
+  height: 30px;
+  width: 140px;
+  padding-left: 200px;
+}
+
+.index, .create, .logout {
+  padding-left: 130px;
 }

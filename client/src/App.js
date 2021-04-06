@@ -1,7 +1,7 @@
 //Component Imports
 import Layout from './components/Layout/Layout';
-import Login from './screens/Login';
-import Register from './screens/Register';
+import Login from './screens/Login/Login';
+import Register from './screens/Register/Register';
 import MainContainer from './containers/MainContainer'
 
 //Package Imports
@@ -41,7 +41,7 @@ function App() {
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/pizzas');
   }
 
   const handleLogout = () => {
@@ -53,7 +53,7 @@ function App() {
   const handleRegister = async (formData) => {
     const userData = await registerUser(formData);
     setCurrentUser(userData);
-    history.push('/')
+    history.push('/pizzas')
 
   }
 

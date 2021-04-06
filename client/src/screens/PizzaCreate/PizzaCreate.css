@@ -1,0 +1,73 @@
+.create-container{
+  margin-top: 200px;
+  display:flex;
+  flex-flow: column;
+  width: 600px;
+  margin-left: 400px;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
+  background-color: #fdb91e;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  border: 2px solid #514c4d;
+  border-radius: 7px;
+  filter: drop-shadow(16px 16px 10px #514c4d);
+}
+
+
+.create-container h3{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+
+  font-size: 30px;
+}
+.create-description {
+  display: flex;
+  align-items: flex-start;
+}
+
+.create-description, .create-city-area, .create-neighborhood,
+.create-pizza-type, .create-image{
+  padding-top: 10px;
+  padding-bottom: 15px;
+  text-align: left;
+}
+
+.create-description label, 
+.create-city-area label, 
+.create-image label, 
+.create-neighborhood label, 
+.create-pizza-type label,
+.create-restaurant label {
+  margin-right: 10px;
+}
+
+.create-restaurant {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.create-neighborhood {
+  text-align: left;
+}
+
+.create-neighborhood select {
+  margin-left: 10px;
+}
+
+.create-description{
+  margin-bottom: 10px;
+}
+
+.create-container button {
+  margin-left: 200px;
+  margin-top: 10px;
+}
+
+.create-container button:hover {
+  background-color: #ff1b09;
+}

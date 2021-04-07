@@ -1,0 +1,51 @@
+.pizzas-container{
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 200px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.pizza{
+  margin-left: 50px;
+  margin-bottom: 50px;
+  margin-top: 15px;
+  font-size: 18px;
+  background-color: #fdb91e;
+  border-radius: 7px;
+  filter: drop-shadow(16px 16px 10px #514c4d);
+  transition: 0.5s
+}
+
+.pizza:hover{
+  transform: scale(1.02)
+}
+
+.pizza a{
+  text-decoration: none;
+}
+.pizza p {
+  color: black;
+  line-height: 35px;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  font-family: 'Nunito', sans-serif;
+  color: black;
+
+}
+
+.pizza p:last-child{
+  padding-bottom: 15px;
+}
+.pizza img {
+  height: 200px;
+  width: 250px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid black;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.pizza :nth-child(1) img{
+  background-color: #514c4d;
+}

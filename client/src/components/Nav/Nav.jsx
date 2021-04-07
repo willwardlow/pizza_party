@@ -1,35 +1,37 @@
 import { NavLink } from 'react-router-dom'
-// import './Nav.css'
+import './Nav.css'
 
 function Nav(props) {
   const { currentUser, handleLogout } = props
 
   return (
     <div className='nav-bar'>
-      <NavLink to='/'>Pizza Party</NavLink>
+      <NavLink className='title' to='/'>Pizza Party</NavLink>
 
       {currentUser ?
         <>
-          <NavLink to='/pizzas'>
+          <NavLink className='index'to='/pizzas'>
             All Pizzas
           </NavLink>
 
-          <NavLink to='/pizzas/new'>
+          <NavLink className='create' to='/pizzas/new'>
             Create A Pizza
           </NavLink>
 
-          <NavLink to='/' onClick={handleLogout}>
+          <NavLink className='logout' to='/' onClick={handleLogout}>
             Logout
           </NavLink>
         </>
         :
         <>
-        <NavLink to='/login'>
+        <NavLink className='login' to='/login'>
         Login
       </NavLink>
-      <NavLink to='/register'>
+      <NavLink className='register' to='/register'>
             Register
       </NavLink>
+          
+      <img className='chicago-stars' src='https://i.imgur.com/JzSWVAL.png' alt='chicago-stars' />
         </>
       }
       

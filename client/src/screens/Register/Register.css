@@ -1,0 +1,123 @@
+.register-container{
+  display:flex;
+  margin-top: 200px;
+  height: 500px;
+  margin-left: 200px;
+  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
+  
+}
+
+.register-form{
+  display: flex;
+  flex-direction: column;
+  margin-right: 200px;
+  align-items: flex-start;
+  height: 100%;
+  width: 400px;
+  border: 2px solid black;
+  background-color: #fdb91e;
+  border-radius: 7px;
+}
+
+.map{
+  border: 2px solid black;
+}
+
+.register-form p{
+  align-self: center;
+  padding-top: 25px; 
+  letter-spacing: 0.1px; 
+  line-height: 30px;
+  font-size: 24px;
+}
+
+.new-username, 
+.new-email,
+.new-password, 
+.city-area, 
+.new-neighborhood {
+   padding-top: 20px;
+   padding-right: 10px;
+   display: flex;
+}
+
+.new-username label, .new-email label,
+.new-password label, .city-area label, .new-neighborhood label {
+   margin-right: 10px;
+   align-items: flex-start;
+   padding-left: 25px;
+   letter-spacing: 0.6px;
+ }
+
+ .new-username {
+   padding-top: 60px;
+ }
+
+ .register-form button {
+   margin-top: 50px;
+   margin-bottom: 30px;
+   padding-left: 10px;
+   padding-right: 10px;
+   height: 30px;
+   border-radius: 10px;
+ }
+
+ .register-form button:hover{
+  background-color: #41b6e6;
+  cursor: pointer;
+ }
+ .new-username input, 
+ .new-email input,
+ .new-password input, 
+ .city-area select, 
+ .new-neighborhood select {
+  border-color: black;
+  font-size: 14px;
+  letter-spacing: 0.6px;
+ }
+
+ .new-username input:active, 
+ .new-email input:active,
+ .new-password input:active, 
+ .city-area select:active, 
+ .new-neighborhood select:active {
+  background-color: #41b6e6;
+ }
+
+ @media screen and (max-width: 1200px){
+   .register-container{
+     margin-left: 100px;
+   }
+ }
+ 
+ @media screen and (max-width: 1000px) {
+   .register-form {
+     margin-right: 150px;
+   }
+ }
+
+ @media screen and (max-width: 1000px) {
+   .register-form {
+     margin-right: 100px;
+   }
+
+   .map {
+     width: 300px;
+     margin-right: 50px;
+   }
+ }
+
+ @media screen and (max-width: 1000px){
+  .register-form p{
+    font-size: 20px;
+  }
+
+ .new-username input, 
+ .new-email input,
+ .new-password input, 
+ .city-area select, 
+ .new-neighborhood select {
+   font-size: 14px;
+ }
+ }

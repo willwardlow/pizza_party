@@ -1,0 +1,92 @@
+.pizza-details{
+  display: flex; 
+  width: 800px;
+  margin-left: 250px;
+  margin-top: 200px;
+  align-items: center;
+  background-color: #fdb91e;
+  border: 2px solid #514c4d;
+  border-radius: 7px;
+  padding-top: 10px;
+}
+
+.details-text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: space-between;
+  margin-left: 50px;
+  width: 350px;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+.pizza-details img {
+  width: 400px;
+  border-radius: 7px;
+  border-right:2px solid #514c4d;
+  margin-left: 20px;
+}
+
+.label{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+}
+.details-buttons{
+  align-self: center;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.details-text:last-child{
+  text-align: left;
+}
+
+.update {
+  margin-right: 40px;
+}
+
+.details-buttons button {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 7px;
+}
+
+.update:hover, .delete:hover{
+  background-color: #41b6e6;
+  cursor: pointer;
+}
+
+.delete:hover{
+  background-color: #ff1b09;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+  .pizza-details {
+    width: 700px;
+  }
+  .pizza-details img {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .pizza-details {
+    margin-left: 200px;
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .pizza-details{
+    margin-left: 100px;
+    width: 500px;
+  }
+}
+

@@ -1,10 +1,16 @@
 .dark {
   background-color: #514C4d;
   text-align: center;
+  padding-top: 25px;
+  height: 80vw;
+  transition: 0.3s;
 }
 
 .light {
   background-color: white;
   text-align: center;
+  padding-top: 25px;
+  height:80vw;
+  transition: 0.3s;
 }
 

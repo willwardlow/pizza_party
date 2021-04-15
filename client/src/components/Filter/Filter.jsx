@@ -8,7 +8,7 @@ export default function Filter(props) {
         value={props.value}
         onChange={(e) => props.onChange(e)}
         name='filter'
-        placeholder='Search'
+        placeholder='Search by Restaurant, Neighborhood or City Area'
         type='text'
         autoFocus
         />

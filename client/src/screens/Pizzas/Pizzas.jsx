@@ -1,13 +1,21 @@
 import { Link } from 'react-router-dom'
+import Filter from '../../components/Filter/Filter';
+import Sort from '../../components/Sort/Sort';
 import './Pizzas.css'
 
 function Pizzas(props) {
   
-  const { pizzas } = props;
+  const { queriedPizzas, handleFilter, handleSort } = props;
+
   
   return (
-    <div className='pizzas-container'> 
-    {pizzas.map((pizza, index) => (
+    <>
+      <div className='filter-and-sort'>
+        <Filter onChange={handleFilter} />
+        <Sort onChange={handleSort} />
+      </div>
+    <div className='pizzas-container'>
+    {queriedPizzas.map((pizza, index) => (
       <div className='pizza' key={index}>
         <Link to={`/pizzas/${pizza.id}`}>
           <img src={pizza.image_url} alt={pizza.name} />
@@ -16,7 +24,8 @@ function Pizzas(props) {
         </Link>
       </div>
     ))}
-  </div>
+      </div>
+  </>
   );
 
 }

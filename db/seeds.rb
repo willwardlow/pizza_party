@@ -94,7 +94,7 @@ puts "#{User.count} created"
 
 #seeding pizzas 
 
-Pizza.create!(restaurant_name: 'Tortorice\'s Pizza', pizza_type: 'Thin Crust', neighborhood: @irving_park, user_id: 1, description: 'Gotta try the piasso style pizza for alll you cheese lovers! Two pizza crusts stacked on top with tons of cheese in between. Then sauce, more cheese, adn toppings!', image_url:'https://www.tortoricespizza.com/wp-content/uploads/2020/03/PICASSO-600x308.png.webp')
+Pizza.create!(restaurant_name: 'Tortorice\'s Pizza', pizza_type: 'Thin Crust', neighborhood: @irving_park, user_id: 1, description: 'Gotta try the picasso style pizza for alll you cheese lovers! Two pizza crusts stacked on top with tons of cheese in between. Then sauce, more cheese, and toppings!', image_url:'https://www.tortoricespizza.com/wp-content/uploads/2020/03/PICASSO-600x308.png.webp')
 
 Pizza.create!(restaurant_name: 'Giordano\'s Pizza', pizza_type: 'Deep Dish', neighborhood: @loop, user_id: 1, description: 'The classic deep dish pizza. Ideal for tourists.', image_url:'https://mediaassets.koaa.com/cordillera-network/wp-content/uploads/sites/11/2018/11/28050722/Giordanos-fixed-1024x576.jpg')
 

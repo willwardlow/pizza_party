@@ -1,9 +1,17 @@
 .pizzas-container{
   display: flex;
   flex-flow: row wrap;
-  margin-top: 200px;
+  margin-top: 50px;
   margin-left: 100px;
   margin-right: 100px;
+}
+
+.filter-and-sort{
+  display: flex;
+  width: 70vw;
+  margin-top: 200px;
+  margin-left: 200px;
+  align-items: center;
 }
 
 .pizza{
@@ -48,4 +56,27 @@
 
 .pizza :nth-child(1) img{
   background-color: #514c4d;
+}
+
+.pizza-filter{
+  width: 25vw;
+  margin-right: 20px;
+  padding: 5px;
+  font-size: 16px;
+  justify-self: flex-start;
+}
+
+.pizza-sort label {
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  margin-right: 5px;
+  font-weight: bold;
+  margin-left: 50px;
+  letter-spacing: 0.2px;
+
+}
+
+.sort{
+  font-size: 16px;
+  letter-spacing: 0.2px;
 }

@@ -20,6 +20,8 @@ function App() {
 
   const [currentUser, setCurrentUser] = useState(null);
   const [neighborhoods, setNeighborhoods] = useState([]);
+
+  const [darkMode, setDarkMode] = useState(false)
   const history = useHistory();
 
   useEffect(() => {
@@ -54,13 +56,16 @@ function App() {
     const userData = await registerUser(formData);
     setCurrentUser(userData);
     history.push('/pizzas')
+  }
 
+  const changeMode = () => {
+    setDarkMode(!darkMode)
   }
 
 
   return (
-    <div className="App">
-      <Layout currentUser={currentUser} handleLogout={handleLogout}>
+    <div className={ darkMode ? 'dark' : 'light'}>
+      <Layout currentUser={currentUser} handleLogout={handleLogout} changeMode={changeMode}>
         <Switch>
           <Route path='/login'>
             <Login handleLogin={handleLogin}/>
@@ -73,7 +78,6 @@ function App() {
           </Route>
         </Switch>
       </Layout>
-
       </div>
   );
 }

@@ -1,0 +1,16 @@
+.footer{
+  height: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 20px;
+}
+
+.mode-switcher{
+  height: 20px;
+  margin-right: 40px;
+  background-color: #41b6e6;
+}

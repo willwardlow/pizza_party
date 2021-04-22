@@ -45,7 +45,7 @@ Inspired by Do312(https://do312.com/) and every Chicagoan having a different opi
 |      React       | Create front end user experience. |
 |   React Router   | Provide links and routers to organize app elements. |
 |  React-Responsive-Carousel   | Create image carousel used on landing page. |
-|   Rails  | Create backend database. |
+|   Rails  | Create RESTful API on Backend |
 
 <br>
 
@@ -102,7 +102,6 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
@@ -141,6 +140,41 @@ Geolocation to show restaurant's location
 ***
 
 ## Code Showcase
+One of the things I am proud to showcase is the ability for the app to show neighborhoods based on it's region. Chicago has 77 neighborhoods and instead of the user sifting through a giant list, I have the user submit the area they are from and the neighborhoods are filtered through.
 
+```javascript
+    const [cityArea, setCityArea] = useState('')
+    
+    const filterNeighborhoods = () => {
+   return neighborhoods.filter((neighborhood) => {
+      return neighborhood.city_area === cityArea
+    })
+  }
+
+  <select name='city_area' defaultValue='default' required onChange={(e) => setCityArea(e.target.value)}>
+        <option value='default' disabled> -- City Area -- </option>
+        <option value='C'>Central</option>
+        <option value='NW'>Northwest</option>
+        <option value='N'>North</option>
+        <option value='S'>South</option>
+        <option value='SW'>Southwest</option>
+        <option value='W'>West</option>
+          </select>
+      </div>
+
+      <div className='new-neighborhood'>
+      <label htmlFor='neighborhood_id'>
+        Neighborhood?
+      </label>
+      <select name='neighborhood_id' defaultValue='default' onChange={handleChange}>
+        <option value='default' disabled> -- Select A Neighborhood --</option>
+        {filterNeighborhoods().map((neighborhood, index) => (
+          <option key={index} value={neighborhood.id}>{neighborhood.name}</option>
+        )
+        )}
+      </select>
+      </div>
+
+      ```
 
 ## Code Issues & Resolutions

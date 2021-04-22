@@ -1,21 +1,24 @@
 .image-carousel{
   display:flex;
   flex-direction: column;
-  width: 80vw;
+  overflow: hidden;
+  width: 40vw;
+  margin: 10% 0 0 8%;
+  border-radius: 20px;
 }
 
 .slide.selected{
-  margin-top: 30px;
-  margin-left: 100px;
-  width: 30%;
+  margin: 0;
+  width: 100%;
+  object-fit: cover;
   overflow: hidden;
+  align-items: center;
+  justify-content: center;
 }
 
 .images{
   overflow: hidden;
   display: inline-flex;
-  height: 50vw;
-  width: 60vw;
   object-fit: cover;
   align-items: center;
   border-radius: 5px;

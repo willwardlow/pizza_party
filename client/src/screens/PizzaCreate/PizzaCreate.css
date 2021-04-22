@@ -1,16 +1,13 @@
 .create-container{
-  margin-top: 200px;
+  margin: 200px 0px 0px 400px;
   display:flex;
   flex-flow: column;
   width: 600px;
-  margin-left: 400px;
   align-items: flex-start;
   text-align: left;
-  font-size: 18px;
-  font-family: 'Nunito', sans-serif;
+  font: 18px 'Nunito', sans-serif;
   background-color: #fdb91e;
-  padding-left: 30px;
-  padding-bottom: 20px;
+  padding: 0px 20px 0px 30px;
   border: 2px solid #514c4d;
   border-radius: 7px;
   filter: drop-shadow(16px 16px 10px #514c4d);

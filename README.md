@@ -64,18 +64,33 @@ Inspired by Do312(https://do312.com/) and every Chicagoan having a different opi
 ``` structure
 
 src
-|__ components/
-      |__ containers
-          |__ PizzaContainer
-      |__ screens
-          |__ PizzaCreate
-          |__ PizzaEdit
-          |__ PizzaDetail
-          |__ Pizzas
-      |__ Shared
-          |__Layout
-          |__Nav
-      
+|__ components
+    |__ Carousel
+        |__ ImageCarousel
+            |__ ImageCarousel.jsx
+            |__ ImageCarousel.css
+    |__ Shared
+        |__ Layout
+           |__ Layout.jsx
+        |__Nav
+           |__ Nav.jsx
+           |__ Nav.css
+|__ containers
+    |__ PizzaContainer
+        |__ PizzaContainer.jsx
+|__ screens
+    |__ PizzaCreate
+        |__ PizzaCreate.jsx
+        |__ PizzaCreate.css
+    |__ PizzaEdit
+        |__ PizzaEdit.jsx
+        |__ PizzaEdit.css
+    |__ PizzaDetail
+        |__ PizzaDetail.jsx
+        |__ PizaDetail.css
+    |__ Pizzas
+        |__ Pizzas.jsx
+        |__ Pizzas.css
 |__ services/
       |__api-Config
       |__auth.js
@@ -91,13 +106,18 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Basic App Structure (Links and Routers)    |    H     |     4 hrs      |        |    TBD    |
-| Basic CSS Layout |    H     |     4 hrs      |      |     TBD     |
-| Create Backend CRUD Actions |    H     |     4 hrs      |         |     TBD     |
-| Create Auth and User Implementation |    H     |     4 hrs      |          |     TBD     |
-| Create Frontend CRUD Actions |    H     |     6 hrs      |         |     TBD     |
-| Advanced CSS / Responsiveness |    H     |     6 hrs      |         |     TBD     |
-| TOTAL               |          |     28 hrs      |      |     TBD     |
+| Basic App Structure (Links and Routers)    |    H     |     4 hrs      |   4 hrs     |    4 hrs    |
+| Creating React Screens and Components | H | 4 hrs | 4 hrs | 4 hrs |
+| Basic CSS Layout |    H     |     4 hrs      |  5 hrs    |     5 hrs     |
+| Create Backend CRUD Actions |    H     |     4 hrs      |   5 hrs      |     5 hrs     |
+| Create Auth and User Implementation |    H     |     4 hrs      |   3 hrs       |     TBD     |
+| Create Frontend CRUD Actions |    H     |     4 hrs      |  3 hrs       |     TBD     |
+| Create Seed Data | H | 2 hrs | 3 hrs | 3 hrs |
+| Advanced CSS / Responsiveness |    H     |     8 hrs      |    7 hrs     |     TBD     |
+| Deploying Frontend to Netlify | H | 2 hrs | 1 hr | 1 hr |
+| Deploying Backend to Heroku | H | 2 hrs | 1 hr | 1 hr |
+| Testing, Debugging, and Troubleshooting | M | 5 hrs | 6 hrs | 6 hrs|   
+| TOTAL               |          |     65 hrs      |      |     TBD     |
 
 <br>
 

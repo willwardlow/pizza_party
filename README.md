@@ -110,14 +110,14 @@ src
 | Creating React Screens and Components | H | 4 hrs | 4 hrs | 4 hrs |
 | Basic CSS Layout |    H     |     4 hrs      |  5 hrs    |     5 hrs     |
 | Create Backend CRUD Actions |    H     |     4 hrs      |   5 hrs      |     5 hrs     |
-| Create Auth and User Implementation |    H     |     4 hrs      |   3 hrs       |     TBD     |
-| Create Frontend CRUD Actions |    H     |     4 hrs      |  3 hrs       |     TBD     |
+| Create Auth and User Implementation |    H     |     4 hrs      |   3 hrs       |     3 hrs     |
+| Create Frontend CRUD Actions |    H     |     4 hrs      |  3 hrs       |     3 hrs     |
 | Create Seed Data | H | 2 hrs | 3 hrs | 3 hrs |
-| Advanced CSS / Responsiveness |    H     |     8 hrs      |    7 hrs     |     TBD     |
+| Advanced CSS / Responsiveness |    H     |     8 hrs      |    7 hrs     |     7 hrs    |
 | Deploying Frontend to Netlify | H | 2 hrs | 1 hr | 1 hr |
 | Deploying Backend to Heroku | H | 2 hrs | 1 hr | 1 hr |
 | Testing, Debugging, and Troubleshooting | M | 5 hrs | 6 hrs | 6 hrs|   
-| TOTAL               |          |     65 hrs      |      |     TBD     |
+| TOTAL               |          |     43 hrs      |  36 hrs   |    36 hrs     |
 
 <br>
 

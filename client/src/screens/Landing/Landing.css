@@ -1,0 +1,12 @@
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 55vw;
+  margin: 0 auto;
+  align-content: center;
+  font: 24px 'Nunito', sans-serif;
+  letter-spacing: 0.1px;
+  line-height: 1.6;
+
+}
